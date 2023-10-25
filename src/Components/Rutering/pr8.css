@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+ .login form {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login label,.login input {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+ .login input[type="text"],.login input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .login button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .login button:hover {
+    background-color: #45a049;
+  }
+
+  
+
+
+   /* styles.css */
+.main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+}
+
+.text-danger {
+    color: red;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Additional styles for specific elements */
+/* For example, style the input fields when they have errors */
+.form-control.error {
+    border: 1px solid red;
+}
+
+/* Style the form labels */
+label {
+    font-weight: bold;
+}
+
+/* Add more styles as needed */
