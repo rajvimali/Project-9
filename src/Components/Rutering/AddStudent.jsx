@@ -77,15 +77,15 @@ const AddStudent = () => {
     return (
         <div className="main">
             <form id="registerForm" onSubmit={handleSubmit}>
-                <h1 class="text-center fw-bolder mt-3">Add Students</h1>
+                <h3 class="text-center fw-bolder mt-3 mb-3">Add Students</h3>
                 <div className="mb-2">
-                    <label className="text-muted fs-4">Student name</label><br />
-                    <input className="form-control p-2 fs-4" name="stname" type="text" onChange={handleChange} />
+                    <label className="text-muted fs-5">Student name</label><br />
+                    <input className="form-control  fs-5" name="stname" type="text" onChange={handleChange} />
                     {errors.stname && <div className="text-danger">{errors.stname}</div>}
                 </div>
                 <div className="mb-2">
-                    <label className="text-muted fs-4">Student Class</label>
-                    <select className="form-select fs-4 p-2 text-muted" onChange={handleChange} name="stclass">
+                    <label className="text-muted fs-5">Student Class</label>
+                    <select className="form-select fs-5 mb-2 text-muted" onChange={handleChange} name="stclass">
                         <option defaultValue>Select class</option>
                         <option value="A">A</option>
                         <option value="B">B</option>
@@ -93,7 +93,7 @@ const AddStudent = () => {
                         <option value="D">D</option>
                         {errors.stclass && <div className="text-danger">{errors.stclass}</div>}
                     </select>
-                    <label htmlFor="" className="text-muted fs-4">Gender</label><br />
+                    <label htmlFor="" className="text-muted fs-5">Gender</label><br />
                     <input type="radio" name='gender' value="Male" onChange={handleChange} />
                     <label htmlFor="" className='p-2'> Male</label>
                     <input type="radio" name='gender' value="Female" onChange={handleChange} />
@@ -102,41 +102,41 @@ const AddStudent = () => {
 
                 </div>
                 <div class="mb-2">
-                    <label for="" class="text-muted fs-4">Date of Birth : </label>
+                    <label for="" class="text-muted fs-5">Date of Birth : </label>
                     <input type="date" class="fs-4 text-muted p-2 border-0" id="dob" onChange={handleChange} name="stdob" />
 
                 </div><br />
-                <h2 class="fw-bolder">Parents/Guardian's details</h2>
+                <h4 class="fw-bolder mb-2">Parents/Guardian's details</h4>
                 <div class="mb-2">
-                    <label for="" class="text-muted fs-4">Father's Name</label>
-                    <input class="form-control p-2 fs-4" id="Father-Name" type="text" onChange={handleChange} name="fname" />
+                    <label for="" class="text-muted fs-5">Father's Name</label>
+                    <input class="form-control fs-5" id="Father-Name" type="text" onChange={handleChange} name="fname" />
                 </div>
                 <div class="mb-2">
-                    <label for="" class="text-muted fs-4">Mother's Name</label>
-                    <input class="form-control p-2 fs-4" id="Mother-name" type="text" onChange={handleChange} name="mname" />
+                    <label for="" class="text-muted fs-5">Mother's Name</label>
+                    <input class="form-control fs-5" id="Mother-name" type="text" onChange={handleChange} name="mname" />
                 </div>
                 <div class="mb-2">
-                    <label for="" class="text-muted fs-4" maxlength="10" minlength="2">Contect Number</label>
-                    <input class="form-control p-2 fs-4" id="contect-number" type="number" onChange={handleChange} name="cnumber" />
+                    <label for="" class="text-muted fs-5" maxlength="10" minlength="2">Contect Number</label>
+                    <input class="form-control fs-5" id="contect-number" type="number" onChange={handleChange} name="cnumber" />
                     {errors.cnumber && <div className="text-danger">{errors.cnumber}</div>}
                 </div>
                 <div class="mb-2">
-                    <label for="" class="text-muted fs-4">Address</label>
-                    <input class="form-control p-2 fs-4" id="address" type="text" onChange={handleChange} name="address" />
+                    <label for="" class="text-muted fs-5">Address</label>
+                    <input class="form-control  fs-5" id="address" type="text" onChange={handleChange} name="address" />
                 </div><br />
                 <div class="col-4">
-                    <h2 class="fw-bolder">Student Mark</h2>
-                    <label for="" class="text-muted fs-4">Maths</label>
-                    <input type="number" class="form-control p-2 fs-4" id="maths" onChange={handleChange} name="maths" />
+                    <h4 class="fw-bolder">Student Marks</h4>
+                    <label for="" class="text-muted fs-5">Maths</label>
+                    <input type="number" class="form-control fs-5" id="maths" onChange={handleChange} name="maths" />
                     {errors.maths && <div className="text-danger">{errors.maths}</div>}
-                    <label for="" class="text-muted fs-4">Computer</label>
-                    <input type="number" class="form-control p-2 fs-4" id="computer" onChange={handleChange} name="computer" />
+                    <label for="" class="text-muted fs-5">Computer</label>
+                    <input type="number" class="form-control fs-5" id="computer" onChange={handleChange} name="computer" />
                     {errors.computer && <div className="text-danger">{errors.computer}</div>}
-                    <label for="" class="text-muted fs-4">English</label>
-                    <input type="number" class="form-control p-2 fs-4" id="english" onChange={handleChange} name="english" />
+                    <label for="" class="text-muted fs-5">English</label>
+                    <input type="number" class="form-control fs-5" id="english" onChange={handleChange} name="english" />
                     {errors.english && <div className="text-danger">{errors.english}</div>}
-                    <label for="" class="text-muted fs-4">Scince</label>
-                    <input type="number" class="form-control p-2 fs-4" id="scince" onChange={handleChange} name="scince" />
+                    <label for="" class="text-muted fs-5">Scince</label>
+                    <input type="number" class="form-control fs-5" id="scince" onChange={handleChange} name="scince" />
                     {errors.scince && <div className="text-danger">{errors.scince}</div>}
 
                     <h4 id="mark-error" class="text-danger pt-2"></h4>
@@ -144,12 +144,12 @@ const AddStudent = () => {
 
                 <div>
 
-                    <label for="uEmail" class="form-label text-muted fs-4">Email</label> <br />
-                    <input type="email " class="form-control p-2 fs-4" name="uEmail" id="uEmail"
+                    <label for="uEmail" class="form-label text-muted fs-5">Email</label> <br />
+                    <input type="email " class="form-control p-2 fs-5" name="uEmail" id="uEmail"
                         onChange={handleChange} required /><br />
 
                 </div>
-                <button className="btn btn-primary fs-4 text-white fw-bolder" id="submit">Submit</button>
+                <button className="btn btn-primary fs-5 text-white form-control" id="submit">Submit</button>
             </form>
         </div>
     );

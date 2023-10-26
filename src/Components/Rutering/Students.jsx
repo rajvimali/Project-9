@@ -138,7 +138,7 @@ export default function Students() {
                   >Delete</a>
                 </td>
               </tr>
-            )) : <tr><td colspan="14"><h1 className='text-center'>Student Not Found</h1></td></tr>
+            )) : <tr><td colspan="14"><h3 className='mt-2 text-muted text-center'>Student Not Found</h3></td></tr>
           }
 
         </tbody>
