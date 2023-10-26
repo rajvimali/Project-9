@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
 import { useParams } from 'react-router-dom'
-// import { StudentList } from './Studentlist';
 
 export default function StudentDetail() {
     const [StudentList , setStudentList] = useState(JSON.parse(localStorage.getItem("studentlist")))

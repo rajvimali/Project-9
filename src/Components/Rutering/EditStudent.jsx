@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-// import { StudentList } from './Studentlist';
 
 export default function EditStudent() {
   const [errors, setErrors] = useState({});
@@ -31,27 +30,27 @@ export default function EditStudent() {
     if (!input.gender || input.gender === 'Select Your Gender') {
       isValid = false;
       errorMessages.stclass = 'Please select Your Gender';
-  }
-    if (!input.maths ||input.maths >= 101 || input.maths<0){
+    }
+    if (!input.maths || input.maths >= 101 || input.maths < 0) {
       isValid = false;
       errorMessages.maths = 'Please Enter Valid Mark';
-  }
-  if (!input.computer ||input.computer >= 101 || input.computer<0){
+    }
+    if (!input.computer || input.computer >= 101 || input.computer < 0) {
       isValid = false;
       errorMessages.computer = 'Please Enter Valid Mark';
-  }
-  if (!input.english || input.english >= 101 || input.english<0){
+    }
+    if (!input.english || input.english >= 101 || input.english < 0) {
       isValid = false;
       errorMessages.english = 'Please Enter Valid Mark';
-  }
-  if (!input.scince || input.scince >= 101 || input.scince<0){
+    }
+    if (!input.scince || input.scince >= 101 || input.scince < 0) {
       isValid = false;
       errorMessages.scince = 'Please Enter Valid Mark';
-  }
-  if(input.cnumber.length != 10){
+    }
+    if (input.cnumber.length != 10) {
       isValid = false;
       errorMessages.cnumber = 'Please Enter Valid Number';
-  }
+    }
 
 
     setErrors(errorMessages);
@@ -62,9 +61,9 @@ export default function EditStudent() {
     e.preventDefault();
     const isValid = validateForm();
     if (isValid) {
-    StudentList[id.id] = input;
-    localStorage.setItem("studentlist", JSON.stringify(StudentList));
-    navigate("/student");
+      StudentList[id.id] = input;
+      localStorage.setItem("studentlist", JSON.stringify(StudentList));
+      navigate("/student");
     }
   };
   return (
@@ -89,24 +88,24 @@ export default function EditStudent() {
             </select>
           </div><br />
           <label htmlFor="" className="text-muted fs-4">Gender</label><br />
-                    <input type="radio" name='gender' value="Male" onChange={handleChange}/>
-                    <label htmlFor="" className='p-2'> Male</label>
-                    <input type="radio" name='gender' value="Female" onChange={handleChange}/>
-                    <label htmlFor="" className='p-2'> Female</label>
-                    {errors.gender && <div className="text-danger">{errors.gender}</div>}
+          <input type="radio" name='gender' value="Male" onChange={handleChange} />
+          <label htmlFor="" className='p-2'> Male</label>
+          <input type="radio" name='gender' value="Female" onChange={handleChange} />
+          <label htmlFor="" className='p-2'> Female</label>
+          {errors.gender && <div className="text-danger">{errors.gender}</div>}
           <div class="mb-2">
             <label for="" class="text-muted fs-4">Date of Birth : </label>
-            <input type="date" class="fs-4 text-muted p-2 border-0" id="dob" onChange={handleChange} name="stdob" value={input ? input.stdob : ""} required/>
+            <input type="date" class="fs-4 text-muted p-2 border-0" id="dob" onChange={handleChange} name="stdob" value={input ? input.stdob : ""} required />
           </div><br />
 
           <h2 class="fw-bolder">Parents/Guardian's details</h2>
           <div class="mb-2">
             <label for="" class="text-muted fs-4">Father's Name</label>
-            <input class="form-control p-2 fs-4" id="Father-Name" type="text" onChange={handleChange} name="fname" value={input ? input.fname : ""}  required/>
+            <input class="form-control p-2 fs-4" id="Father-Name" type="text" onChange={handleChange} name="fname" value={input ? input.fname : ""} required />
           </div>
           <div class="mb-2">
             <label for="" class="text-muted fs-4">Mother's Name</label>
-            <input class="form-control p-2 fs-4" id="Mother-name" type="text" onChange={handleChange} name="mname" value={input ? input.mname : ""} required/>
+            <input class="form-control p-2 fs-4" id="Mother-name" type="text" onChange={handleChange} name="mname" value={input ? input.mname : ""} required />
           </div>
           <div class="mb-2">
             <label for="" class="text-muted fs-4">Contect Number</label>
@@ -115,7 +114,7 @@ export default function EditStudent() {
           </div>
           <div class="mb-2">
             <label for="" class="text-muted fs-4">Address</label>
-            <input class="form-control p-2 fs-4" id="address" type="text" onChange={handleChange} name="address" value={input ? input.address : ""}required />
+            <input class="form-control p-2 fs-4" id="address" type="text" onChange={handleChange} name="address" value={input ? input.address : ""} required />
           </div><br />
           <div class="col-4">
             <h2 class="fw-bolder">Student Mark</h2>
@@ -132,8 +131,8 @@ export default function EditStudent() {
             <input type="number" class="form-control p-2 fs-4" id="scince" onChange={handleChange} name="scince" value={input ? input.scince : ""} />
             {errors.scince && <div className="text-danger">{errors.scince}</div>}
             <label for="" class=" text-muted fs-4">Email</label> <br />
-                        <input type="email " class="form-control p-2 fs-4" name="uEmail" id="uEmail"
-                            onChange={handleChange} value={input ? input.uEmail : ""} required /><br />
+            <input type="email " class="form-control p-2 fs-4" name="uEmail" id="uEmail"
+              onChange={handleChange} value={input ? input.uEmail : ""} required /><br />
           </div>
           <div class="text-center mt-3">
             <button class="btn btn-success fs-4 fw-bolder px-5 py-2 " id="add-btn"

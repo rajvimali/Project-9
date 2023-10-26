@@ -39,7 +39,7 @@ function Signup() {
         <input type="password" name="password" onChange={(e) => setInput({ ...input, [e.target.name]: e.target.value })} />
         <label htmlFor="">Confirm Password</label>
         <input type="password" name="confirmpassword" onChange={(e) => setInput({ ...input, [e.target.name]: e.target.value })} />
-        <button type="submit">Submit</button>
+        <button type="submit" className='bg-primary'>Submit</button>
       </form>
     </div>
   )

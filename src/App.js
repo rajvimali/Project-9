@@ -11,10 +11,9 @@ import AddStudent from './Components/Rutering/AddStudent';
 import Login from './Components/Rutering/Login';
 import Signup from './Components/Rutering/Signup';
 
-const [activeUser, setActiveUser] = useState(true)
-
 
 function App() {
+  const [activeUser, setActiveUser] = useState(true)
   return (
     <>
 
